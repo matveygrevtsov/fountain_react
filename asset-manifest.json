@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/fountain_react/static/css/main.c17442e3.chunk.css",
+    "main.js": "/fountain_react/static/js/main.c930a2d2.chunk.js",
+    "main.js.map": "/fountain_react/static/js/main.c930a2d2.chunk.js.map",
+    "runtime-main.js": "/fountain_react/static/js/runtime-main.318b9667.js",
+    "runtime-main.js.map": "/fountain_react/static/js/runtime-main.318b9667.js.map",
+    "static/js/2.764f9145.chunk.js": "/fountain_react/static/js/2.764f9145.chunk.js",
+    "static/js/2.764f9145.chunk.js.map": "/fountain_react/static/js/2.764f9145.chunk.js.map",
+    "static/js/3.5afaa4cb.chunk.js": "/fountain_react/static/js/3.5afaa4cb.chunk.js",
+    "static/js/3.5afaa4cb.chunk.js.map": "/fountain_react/static/js/3.5afaa4cb.chunk.js.map",
+    "index.html": "/fountain_react/index.html",
+    "static/css/main.c17442e3.chunk.css.map": "/fountain_react/static/css/main.c17442e3.chunk.css.map",
+    "static/js/2.764f9145.chunk.js.LICENSE.txt": "/fountain_react/static/js/2.764f9145.chunk.js.LICENSE.txt",
+    "static/media/coin1.2831f4f9.svg": "/fountain_react/static/media/coin1.2831f4f9.svg",
+    "static/media/coin2.323f5163.svg": "/fountain_react/static/media/coin2.323f5163.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.318b9667.js",
+    "static/js/2.764f9145.chunk.js",
+    "static/css/main.c17442e3.chunk.css",
+    "static/js/main.c930a2d2.chunk.js"
+  ]
+}
