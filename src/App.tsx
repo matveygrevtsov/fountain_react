@@ -20,6 +20,7 @@ const App = () => {
       canvasRef: fountainCanvasRef,
     })
     fountainAnimator.start()
+    return () => fountainAnimator.destroy()
   }, [])
 
   return <canvas ref={fountainCanvasRef} />

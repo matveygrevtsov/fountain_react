@@ -95,7 +95,6 @@ class FountainAnimator {
   constructor(props) {
     this.state = props
     this.canvas = props.canvasRef
-    this.context = props.canvasRef.current.context
     this.setCanvasSize()
     window.addEventListener('resize', () => this.setCanvasSize())
   }
@@ -126,7 +125,6 @@ class FountainAnimator {
       (items) => {
         const context = this.canvas.current.getContext('2d')
         const tick = (timestamp) => {
-          requestAnimationFrame(tick)
           FountainItem.period = periodCalculator(timestamp)
           context.clearRect(
             0,
@@ -135,11 +133,16 @@ class FountainAnimator {
             this.canvas.current.height,
           )
           items.forEach((item) => item.render())
+          this.requestAnimation = requestAnimationFrame(tick)
         }
-        requestAnimationFrame(tick)
+        this.requestAnimation = requestAnimationFrame(tick)
       },
       () => console.log('Images loading error'),
     )
+  }
+
+  destroy() {
+    cancelAnimationFrame(this.requestAnimation)
   }
 }
 
