@@ -97,6 +97,7 @@ class FountainAnimator {
     this.canvas = props.canvasRef
     this.setCanvasSize()
     window.addEventListener('resize', () => this.setCanvasSize())
+    this.id = this.canvas.current.id
   }
 
   setCanvasSize() {
@@ -116,13 +117,16 @@ class FountainAnimator {
           }),
         )
       }
-      return items
+      FountainAnimator[this.id] = FountainAnimator[this.id]
+        ? [...FountainAnimator[this.id], ...items]
+        : items
+      return FountainAnimator[this.id]
     })
   }
 
   start() {
     this.createItems().then(
-      (items) => {
+      () => {
         const context = this.canvas.current.getContext('2d')
         const tick = (timestamp) => {
           FountainItem.period = periodCalculator(timestamp)
@@ -132,7 +136,7 @@ class FountainAnimator {
             this.canvas.current.width,
             this.canvas.current.height,
           )
-          items.forEach((item) => item.render())
+          FountainAnimator[this.id].forEach((item) => item.render())
           this.requestAnimation = requestAnimationFrame(tick)
         }
         this.requestAnimation = requestAnimationFrame(tick)
